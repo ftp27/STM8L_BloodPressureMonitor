@@ -60,6 +60,10 @@ int main ( void )
   CLK_PCKENR |= 0x20; // UART clock enable
   
   // UART init
+  PC_DDR_bit.DDR3 = 1;
+  PC_CR1_bit.C13 = 1;
+  PC_CR2_bit.C23 = 0;
+  
   USART_CR1 = 0;
   USART_CR3 = 0;
   USART_CR4 = 0;
